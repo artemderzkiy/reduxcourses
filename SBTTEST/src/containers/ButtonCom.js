@@ -1,11 +1,12 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
+import styles from '../css/style.css'
 
 class ButtonCom extends Component {
 	render()
 	{
 		return <div>		
-		<button>+ Добавить источник поступления</button>	
+		<button className={styles.buttonGroup}>+ Добавить источник поступления</button>	
 		</div>
 		
 	}

@@ -1,0 +1,66 @@
+h1
+{
+	font-size: 18px;
+}
+label {
+	font-size: 10px;
+	color : #c4c6c7 ; 
+}
+select {
+	height: 38px;
+	width: 195px;	
+	margin: 10px;
+}
+textarea {
+	width : 100%;
+	height: 53px;
+	border-top: 2px solid  #b2b2b2;
+	border-radius: 3px;
+	resize: none;
+}
+
+.textarea__simple
+{
+	background-color: #E5E5E7;
+}
+.input__simple
+{
+	background-color: #f2f2f2;
+	height: 38px;
+	width: 195px;
+	border-left: none;
+	border-radius: 3px;
+	font-size: 20px; 
+	font-family: Tahoma;
+}
+
+.line  {
+	border-top: 1px dashed #c4c6c7; 
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.label__rubl
+{
+	margin-left: 10px;
+	font-size: 28px;
+
+}
+.SumGroup{
+	display:flex;
+	justify-content:flex-start;
+	align-items: flex-end;
+	flex-wrap:wrap;
+}
+.SourseGroup{
+	display:flex;
+	justify-content: flex-start;    
+}
+.buttonGroup {
+	width: 270px;
+	height: 30px;
+	background-color: #f4f4f4;
+	border-radius: 2px;
+	font-weight: bold;
+	color : #b2b2b2;
+	border : 1px solid #b2b2b2;
+}
