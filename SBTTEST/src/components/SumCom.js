@@ -4,9 +4,9 @@ import {connect} from 'react-redux'
 import styles from '../css/style.css'
 
 
-class SumCom extends Component {
+export default class SumCom extends Component {
 	render() {
-	//var fullSum= this.props.fullSum;
+	
 		return (<div className={styles.SumGroup}>	
 		         <div>	
 					<label>Сумма</label>
@@ -18,11 +18,3 @@ class SumCom extends Component {
 	}
 	
 }
-
-function mapStateToProps(state) {
-	return {
-		numOvn: state.numOvn
-	}
-}
-
-export default connect(mapStateToProps)(SumCom)

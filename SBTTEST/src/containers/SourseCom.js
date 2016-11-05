@@ -6,28 +6,15 @@ import styles from '../css/style.css'
 import {connect} from 'react-redux'
 
 class SourseCom extends Component {
-	defaultProps = function() {
-		return { 
-			value: ''
-		}
-	}
+	
 
-	componentDidMount() {
-		//...
-	}
-	//componentWillReceiveProps(nextProps) {
-	//	if (this.state.value !== nextProps.value) {
 
-	//	}
-	//}
+	
 
 	render() {
-		let value, val;
-		if (!!this.props.value) {
-			value = this.props.value;
-			val = value.splice(0,1);	
-		}
-		
+	
+		//let numOvn= this.props.numOvn;
+
 		return  (<div>
 			<h1>Укажите источник полступления</h1>
 			<div className={styles.SourseGroup}>
@@ -35,13 +22,17 @@ class SourseCom extends Component {
 			<label>Кассовый символ</label>
 			<ComboBox/>
 			</div>
-			<SumCom val={val} />
+			<SumCom />
 			</div>
 			<TextArea/>			
 			</div>
 			)
 	}
 }
+
+// function onChange(e) {
+//   this.props.dispatch(updateName(e.target.value));
+// }
 
 function mapStateToProps(state) {
 	return {

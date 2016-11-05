@@ -3,19 +3,31 @@ import {connect} from 'react-redux'
 import styles from '../css/style.css'
 
 class ButtonCom extends Component {
+
+test() {
+	dispatch(toggleBut(activeBut))
+} 
+
 	render()
 	{
+		var activeBut =true;
+
 		return <div>		
-		<button className={styles.buttonGroup}>+ Добавить источник поступления</button>	
+		<button className={(activeBut==true) ? styles.buttonGroup__active : styles.buttonGroup__notactive} onClick={this.test.bind(this)}>+ Добавить источник поступления</button>	
 		</div>
 		
 	}
 }
 
-function mapStateToProps(state) {
+
+
+const mapDispatchToProps = (dispatch) => {
 	return {
-		numOvn: state.numOvn
+		onButClick: (id) => {
+			return
+			dispatch(toggleTodo(id))
+		}
 	}
 }
 
-export default connect(mapStateToProps)(ButtonCom)
+export default connect(mapDispatchToProps)(ButtonCom)

@@ -7,13 +7,9 @@ class TextField extends Component {
 	
 	render()
 	{	
-		const {
-			type,
-			firstNum
-		} = this.props
 		
-			return <div>		
-				<input className={styles.input__simple} type="Number" value={firstNum} onKeyDown={console.log("hello")} placeholder="raz"/>
+		return <div>		
+		<input className={styles.input__simple} type="Number"  onClick={console.log("hello")} />
 		</div>
 	}
 }

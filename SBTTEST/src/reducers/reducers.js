@@ -1,13 +1,18 @@
-function placeSum(state = [], action) {
-  switch(action.type){
-    case 'SET_SUM_OVN':
-      // return the new state with the new comment
-      return [...state,{
-        sumOvn: action.sum
-      }];
-    
-    default:
-      return state;
-  }
-  return state;
+import { TOOGLE_BUT } from '../actions/constActions'
+
+const initialState = {
+  activeBut: false
 }
+
+export default function button (state = initialState, action) {
+  switch (action.type) {
+    case 'TOOGLE_BUT':
+       
+    return Object.assign({}, state, {activeBut: !action.activeBut})
+
+    default:
+    return state
+  }
+}
+
+

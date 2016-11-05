@@ -1,31 +1,40 @@
 import * as types from '../actions/constActions';
 
-export function setSumOvn(sumval)
+
+
+export const AddSourse = (kassSymb, sourseField, sumField) => 
 {
 	return {
-		type: types.SET_SUM_OVN,
-		sumval
+		type: types.ADD_SOURSE,		
+		kasSymb,
+		sourseField,
+		sumField 
+		
 	}
 }
+
+export const DeleteSourse = (id) => 
+{
+	return {
+		type: types.DELETE_SOURSE,		
+		id 
+		
+	}
+}
+
 
 export function getSumOvn(sumval)
 {
 	return {
 		type: types.GET_SUM_OVN,
-		sumval
+		ovnsum
 	}
 }
 
-export function setSourse(sourse) {
+export function toogleBut(sumval)
+{
 	return {
-		type: types.ADD_SOURSE,
-		sourse
-	};
-}
-
-export function deleteSourse(sourse) {
-	return {
-		type: types.DELETE_SOURSE,
-		sourse
-	};
+		type: types.TOOGLE_BUT,
+		activeBut
+	}
 }

@@ -55,12 +55,22 @@ textarea {
 	display:flex;
 	justify-content: flex-start;    
 }
-.buttonGroup {
+.buttonGroup__notactive {
+	width: 270px;
+	height: 30px;
+	background-color: #ffffff;
+	border-radius: 2px;
+	font-weight: bold;
+	color : #b2b2b2;
+	border : 1px solid #b2b2b2;
+}
+
+.buttonGroup__active {
 	width: 270px;
 	height: 30px;
 	background-color: #f4f4f4;
 	border-radius: 2px;
 	font-weight: bold;
-	color : #b2b2b2;
+	color : #000000;
 	border : 1px solid #b2b2b2;
 }
