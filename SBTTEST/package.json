@@ -4,7 +4,8 @@
   "description": "redux vk app",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "build": "webpack"
   },
   "author": "Artem Derzkiy",
   "license": "ISC",

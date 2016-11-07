@@ -3,7 +3,7 @@ import { ADD_SOURSE, DELETE_SOURSE } from '../actions/constActions'
 const initialState = [{
   id : 0,
   sourseField : '',
-  kassSymb : '',  
+  kasSymb : '',  
     sumField : ''
 }]
 
@@ -14,7 +14,7 @@ export default function sourses (state = initialState, action) {
     {
        id: state.reduce((maxId, todo) => Math.max(todo.id, maxId), -1) + 1,
       sourseField: action.sourseField,
-      kassSymb : action.kassSymb,  
+      kasSymb : action.kasSymb,  
     sumField : action.sumField
     },
     ...state

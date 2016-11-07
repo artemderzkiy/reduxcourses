@@ -1,17 +1,20 @@
-import { GET_SUM_OVN } from '../actions/constActions'
+import { GET_SUM_OVN, SET_SUM_OVN } from '../actions/constActions'
 
 const initialState = {
-  ovnsum: ''
+	ovnsum: '',
+	sum : ''
 }
 
 export default function ovn (state = initialState, action) {
-  switch (action.type) {
-    case 'GET_SUM_OVN':
-        
-    return Object.assign({}, state, {ovnsum: action.ovnsum })
+	switch (action.type) {
+		case 'SET_SUM_OVN':
+		return  ({...state, ovnsum:  action.ovnsum})
 
-    default:
-    return state
-  }
+		case 'SET_SUM':
+		return  ({...state,	sum: action.sum})
+
+		default:
+		return state
+	}
 }
 

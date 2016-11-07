@@ -6,18 +6,20 @@ export default class SourseList extends Component {
 	
 	static propTypes = {
 		sourses: PropTypes.array.isRequired,
-		actions : PropTypes.object.isRequired
+		actions : PropTypes.object.isRequired,
+		ovn : PropTypes.object.isRequired
 	}
 	
 
 	render() {
 
-		const { sourses,actions} = this.props
+		const { sourses,ovn,actions} = this.props
+		
 		
 
 		return  (<ul>
 			{sourses.map(sourse =>
-				<SourseCom key={sourse.id} sourse={sourse} {...actions} />
+				<SourseCom key={sourse.id} sourse={sourse} ovn={ovn} {...actions} />
 				)}	
 				</ul>
 				)

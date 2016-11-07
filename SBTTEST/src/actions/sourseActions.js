@@ -2,7 +2,7 @@ import * as types from '../actions/constActions';
 
 
 
-export const AddSourse = (kassSymb, sourseField, sumField) => 
+export const AddSourse = (kasSymb, sourseField, sumField) => 
 {
 	return {
 		type: types.ADD_SOURSE,		
@@ -23,15 +23,23 @@ export const DeleteSourse = (id) =>
 }
 
 
-export function getSumOvn(sumval)
+export const setSumOvn = (ovnsum) =>
 {
 	return {
-		type: types.GET_SUM_OVN,
+		type: types.SET_SUM_OVN,
 		ovnsum
 	}
 }
 
-export function toogleBut(sumval)
+export const setSum = (sum) =>
+{
+	return {
+		type: types.SET_SUM,
+		sum
+	}
+}
+
+export const toogleBut = (activeBut) =>
 {
 	return {
 		type: types.TOOGLE_BUT,

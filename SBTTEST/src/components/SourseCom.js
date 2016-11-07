@@ -7,12 +7,14 @@ import styles from '../css/style.css'
 export default class SourseCom extends Component {
 	
 	static propTypes = {
-		sourse: PropTypes.object.isRequired,    
+		sourse: PropTypes.object.isRequired,
+		ovn:  PropTypes.object.isRequired,
+		actions :  PropTypes.object.isRequired, 
 		DeleteSourse: PropTypes.func.isRequired    
 	}
 
 	render() {
-		const { todo, deleteTodo } = this.props
+		const { sourse,ovn, DeleteSourse } = this.props
 
 		let element = (<div>
 			<h1>Укажите источник полступления</h1>
@@ -21,11 +23,12 @@ export default class SourseCom extends Component {
 			<label>Кассовый символ</label>
 			<ComboBox/>
 			</div>
-			<SumCom />
+			<SumCom ovn={ovn} />
+			<i className={styles.trash} aria-hidden="true"
+                  onClick={() => DeleteSourse(sourse.id)}>  </i>	
 			</div>
 			<TextArea/>
-			<button className="destroy"
-                  onClick={() => DeleteSourse(sourse.id)} />			
+					
 			</div>
 			)
 	

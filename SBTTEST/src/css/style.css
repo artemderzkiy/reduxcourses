@@ -18,6 +18,9 @@ textarea {
 	border-radius: 3px;
 	resize: none;
 }
+ul{
+	list-style-type: none;
+}
 
 .textarea__simple
 {
@@ -63,6 +66,7 @@ textarea {
 	font-weight: bold;
 	color : #b2b2b2;
 	border : 1px solid #b2b2b2;
+	pointer-events:none;
 }
 
 .buttonGroup__active {
@@ -73,4 +77,10 @@ textarea {
 	font-weight: bold;
 	color : #000000;
 	border : 1px solid #b2b2b2;
+}
+.trash
+{
+	border : 1px solid black;
+	width: 20px;
+	height: 20px;
 }
