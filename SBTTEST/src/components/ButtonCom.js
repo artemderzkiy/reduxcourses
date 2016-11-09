@@ -14,6 +14,8 @@ export default class ButtonCom extends Component {
 		{
 			this.props.actions.ToogleBut()
 		}
+		else 
+			this.props.actions.ToogleBut()
 	}
 
 	handleSave = (e)  => {

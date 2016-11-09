@@ -5,22 +5,25 @@ export default class TextField extends Component {
 	
 	static PropTypes = {
 		setSumOvn: PropTypes.func.isRequired,
-		setSum : PropTypes.func.isRequired
+		toogleBut : PropTypes.func.isRequired
 	}
 
 	
 	
 	handleSetSumOvn = e  => {		
-		this.props.setSumOvn(e.target.value)		
-	}
+		this.props.setSumOvn(e.target.value)
+
+		if (this.props.ovn.sum > this.props.ovn.ovnsum)
+		{
+			this.props.toogleBut(true)
+		}		
+		else  
+		{
+			this.props.toogleBut(false)
+		}
 
 
-	handleSetSum = e  => {		
-		this.props.actions.setSum(e.target.value)		
-	}
-
-
-	
+	}	
 
 
 
@@ -31,7 +34,7 @@ export default class TextField extends Component {
 		
 
 		return (
-			<input className={styles.input__simple} type="Number"  onChange={this.handleSetSumOvn}  onKeyUp={this.handleSetSum} value={this.props.ovn.ovnsum}  />			
+			<input className={styles.input__simple} type="Number"  onChange={this.handleSetSumOvn}  value={this.props.ovn.ovnsum}  />			
 			)
 
 	}

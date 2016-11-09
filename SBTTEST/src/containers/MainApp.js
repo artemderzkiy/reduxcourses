@@ -6,6 +6,7 @@ import ButtonCom from '../components/ButtonCom'
 import ComboBox from '../components/ComboBox'
 import NumOvnCom from '../components/NumOvnCom'
 import SumCom from '../components/SumCom'
+import SumComSum from '../components/SumComSum'
 import SoursesList  from '../components/SoursesList'
 import styles from '../css/style.css'
 
@@ -14,7 +15,7 @@ const MainApp = ({sourses,ovn,button, actions}) => (
   <NumOvnCom actions={actions} ovn={ovn}/>
   <div className={styles.line}/>
   <h1>Введите общую сумму взноса</h1>
-  <SumCom actions={actions} ovn={ovn}/>
+  <SumComSum actions={actions} ovn={ovn}/>
   <div className={styles.line}/>
   <SoursesList sourses={sourses} ovn={ovn} actions={actions}/>  
   <ButtonCom actions={actions}  button={button} ovn={ovn}/>  

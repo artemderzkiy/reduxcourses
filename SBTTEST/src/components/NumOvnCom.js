@@ -20,7 +20,7 @@ export default class NumOvnCom extends Component {
 			<h1>Заполните реквизиты на ввод наличными</h1>
 			<label >Номер ОВН</label>
 			<br/>
-			<TextField setSumOvn={actions.setSumOvn} ovn={ovn}/>		
+			<TextField setSumOvn={actions.setSumOvn} toogleBut={actions.toogleBut} ovn={ovn}/>		
 			</div>
 			)
 	}

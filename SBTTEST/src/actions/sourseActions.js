@@ -44,5 +44,6 @@ export const toogleBut = (activeBut) =>
 	return {
 		type: types.TOOGLE_BUT,
 		activeBut
+		
 	}
 }

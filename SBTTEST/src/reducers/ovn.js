@@ -8,10 +8,10 @@ const initialState = {
 export default function ovn (state = initialState, action) {
 	switch (action.type) {
 		case 'SET_SUM_OVN':
-		return  ({...state, ovnsum:  action.ovnsum})
+		return  ({...state, ovnsum:  Number(action.ovnsum)})
 
 		case 'SET_SUM':
-		return  ({...state,	sum: action.sum})
+		return  ({...state,	sum: Number(action.sum)})
 
 		default:
 		return state

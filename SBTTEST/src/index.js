@@ -23,6 +23,7 @@ const store = configureStore();
 // Dispatch some actions
 //store.dispatch(setSum(50))
 //store.dispatch(setSumOvn(500));
+//store.dispatch(toogleBut(true));
 //store.dispatch(toogleBut());
 // Stop listening to state updates
 //unsubscribe()
