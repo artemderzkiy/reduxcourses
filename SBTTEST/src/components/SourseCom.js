@@ -3,15 +3,13 @@ import TextArea from './TextArea'
 import ComboBox from './ComboBox'
 import SumCom from './SumCom'
 import styles from '../css/style.css'
-//import fafa from '../css/font-awesome-4.7.0/css/font-awesome.min.css'
 
 export default class SourseCom extends Component {
 	
 	static propTypes = {
 		sourse: PropTypes.object.isRequired,
 		ovn:  PropTypes.object.isRequired,
-		actions :  PropTypes.object.isRequired
-		   
+		actions :  PropTypes.object.isRequired		   
 	}
 
 	render() {

@@ -1,7 +1,7 @@
 {
-  "name": "reduxcourse",
+  "name": "reduxsbt",
   "version": "1.0.0",
-  "description": "redux vk app",
+  "description": "redux sbt app",
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
