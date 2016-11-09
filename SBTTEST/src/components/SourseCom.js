@@ -3,32 +3,32 @@ import TextArea from './TextArea'
 import ComboBox from './ComboBox'
 import SumCom from './SumCom'
 import styles from '../css/style.css'
+//import fafa from '../css/font-awesome-4.7.0/css/font-awesome.min.css'
 
 export default class SourseCom extends Component {
 	
 	static propTypes = {
 		sourse: PropTypes.object.isRequired,
 		ovn:  PropTypes.object.isRequired,
-		actions :  PropTypes.object.isRequired, 
-		DeleteSourse: PropTypes.func.isRequired    
+		actions :  PropTypes.object.isRequired
+		   
 	}
 
 	render() {
-		const { sourse,ovn, DeleteSourse } = this.props
+		const { sourse,ovn, actions } = this.props
 
 		let element = (<div>
 			<h1>Укажите источник полступления</h1>
 			<div className={styles.SourseGroup}>
-			<div>
-			<label>Кассовый символ</label>
+			<div>			
 			<ComboBox/>
 			</div>
-			<SumCom ovn={ovn} />
+			<SumCom ovn={ovn} actions={actions}/>
 			<i className={styles.trash} aria-hidden="true"
-                  onClick={() => DeleteSourse(sourse.id)}>  </i>	
+                  onClick={() => actions.DeleteSourse(sourse.id)}>Del</i>	
 			</div>
 			<TextArea/>
-					
+			<div className={styles.line}/>		
 			</div>
 			)
 	

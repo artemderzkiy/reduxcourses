@@ -19,7 +19,7 @@ export default class SourseList extends Component {
 
 		return  (<ul>
 			{sourses.map(sourse =>
-				<SourseCom key={sourse.id} sourse={sourse} ovn={ovn} {...actions} />
+				<SourseCom key={sourse.id} sourse={sourse} ovn={ovn} actions={actions} />
 				)}	
 				</ul>
 				)

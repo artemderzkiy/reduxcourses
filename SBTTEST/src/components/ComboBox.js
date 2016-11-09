@@ -7,7 +7,9 @@ export default class ComboBox extends Component {
 		let KasSymbols = ['rubles', 'dollars', 'evros'];
 
 		return( 
-			<div>		
+			<div>	
+			<label>Кассовый символ</label>
+			<br/>	
 		<select id="sel">
 		{KasSymbols.map(KasSymbol =>
 				<option  key={KasSymbol} value={KasSymbol} >{KasSymbol}</option>

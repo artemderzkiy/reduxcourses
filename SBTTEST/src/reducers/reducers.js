@@ -7,13 +7,11 @@ const initialState = {
 export default function button (state = initialState, action) {
 	switch (action.type) {
 		case 'TOOGLE_BUT': 
-		if (sum>ovnsum)
-		{
+		
 		return (			
-			{ ...state, activeBut: true }			
+			{ ...state, activeBut: !action.activeBut }			
 			)
-	}
-	else return state
+	
 		default:
 		return state
 

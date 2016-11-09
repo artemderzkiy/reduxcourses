@@ -16,9 +16,8 @@ const MainApp = ({sourses,ovn,button, actions}) => (
   <h1>Введите общую сумму взноса</h1>
   <SumCom actions={actions} ovn={ovn}/>
   <div className={styles.line}/>
-  <SoursesList sourses={sourses} ovn={ovn} actions={actions}/>
-  <div className={styles.line}/>
-  <ButtonCom AddSourse={actions.AddSourse}  button={button}/>  
+  <SoursesList sourses={sourses} ovn={ovn} actions={actions}/>  
+  <ButtonCom actions={actions}  button={button} ovn={ovn}/>  
   </div>
  
   )
