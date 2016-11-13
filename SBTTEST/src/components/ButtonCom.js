@@ -10,21 +10,27 @@ export default class ButtonCom extends Component {
 	}
 
 	
-
 	handleSave = (e)  => {
 		if (true) {
-			this.props.actions.AddSourse(document.getElementById("sel").value, this.props.ovn.ovnsum, document.getElementById("ta").value);
-					}
+			this.props.actions.AddSourse(document.getElementById("sel").value, document.getElementById("ta").value ,Number(document.getElementById("inp").value));
+			document.getElementById("sel").value="";
+			document.getElementById("ta").value="";
+			document.getElementById("inp").value="";
+			this.props.actions.setSumOvn("");
+		}
 	}
 
 	render()
 	{
 		var activeBut =this.props.button.activeBut;
 
-		return (<button className={(activeBut==true) ? styles.buttonGroup__active : styles.buttonGroup__notactive} onClick={this.handleSave} onChange={this.toogleBut}>+ Добавить источник поступления</button>	)
-
-
+		return (<button 
+			className={(activeBut==true) ? styles.buttonGroup__active : styles.buttonGroup__notactive} 
+			onClick={this.handleSave} >+ 
+			Добавить источник поступления
+			</button>	
+			)
+		}
 	}
-}
 
 

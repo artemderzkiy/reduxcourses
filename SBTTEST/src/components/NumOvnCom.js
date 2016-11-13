@@ -1,5 +1,6 @@
 import React, {Component,PropTypes} from 'react'
 import TextField from './TextField'
+import styles from '../css/style.css'
 
 export default class NumOvnCom extends Component {
 
@@ -9,18 +10,34 @@ export default class NumOvnCom extends Component {
 		sourses: PropTypes.array.isRequired
 	}
 	
-
+	handleSetSumOvn = e  => {		
+		this.props.actions.setSumOvn(e.target.value)
+		let sumsourse=0;
+		for (var sourse of this.props.sourses) {   
+			sumsourse+=Number(sourse.sumField);
+			console.log(sumsourse)
+		}
+		if (this.props.ovn.sum > sumsourse)
+		{
+			this.props.actions.toogleBut(true)
+		}		
+		else  
+		{
+			this.props.actions.toogleBut(false)
+		}
+	}	
 
 	render()
 	{
 		const {actions, ovn,sourses} = this.props;
-		
-		return (	<div>
-			<h1>Заполните реквизиты на ввод наличными</h1>
-			<label >Номер ОВН</label>
+		return (	<div >
+			<h1>Заполните реквизиты объявления на взнос наличными</h1>
+			<div >
+			<label>Номер ОВН</label>
 			<br/>
-			<TextField setSumOvn={actions.setSumOvn} toogleBut={actions.toogleBut} ovn={ovn} sourses={sourses}/>		
+			<TextField onChange={this.handleSetSumOvn} />
+			</div>		
 			</div>
 			)
+		}
 	}
-}

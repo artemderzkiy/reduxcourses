@@ -1,9 +1,11 @@
 h1
 {
 	font-size: 18px;
+	font-weight: bold;
 }
 label {
 	font-size: 10px;
+	font-weight: normal;
 	color : #c4c6c7 ; 
 }
 select {
@@ -49,6 +51,7 @@ ul{
 	font-size: 28px;
 
 }
+
 .SumGroup{
 	display:flex;
 	justify-content:flex-start;
@@ -79,9 +82,24 @@ ul{
 	color : #000000;
 	border : 1px solid #b2b2b2;
 }
-.trash
+.buttonGroup__active {
+	width: 270px;
+	height: 30px;
+	background-color: #f4f4f4;
+	border-radius: 2px;
+	font-weight: bold;
+	color : #2222222;
+	border : 1px solid #b4b4b4;
+}
+
+.leftside
 {
-	border : 1px solid black;
-	width: 20px;
-	height: 20px;
+	text-align: right;
+}
+.button_trash
+{
+	width: 30px;
+	height: 30px;
+	border: 1px solid #b2b2b2;
+	border-radius: 3px;
 }
