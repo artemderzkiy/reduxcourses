@@ -6,7 +6,7 @@ import configureStore from './store/configureStore'
 import {AddSourse} from './actions/sourseActions'
 
 const store = configureStore();
-
+// commented FOR TESTING ACTIONS 
 // console.log(store.getState())
 
 

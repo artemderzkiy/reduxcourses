@@ -5,7 +5,7 @@ import styles from '../css/style.css'
 
 export default class SumComSum extends Component {
 
-static propTypes = {		
+	static propTypes = {		
 		actions : PropTypes.object.isRequired,
 		ovn : PropTypes.object.isRequired,
 		sourses : PropTypes.array.isRequired,
@@ -17,9 +17,9 @@ static propTypes = {
 	handleToogle = e => {
 		let sumsourse=0;
 		for (var sourse of this.props.sourses) {   
-			sumsourse+=Number(sourse.sumField);
-			console.log(sumsourse)
+			sumsourse+=Number(sourse.sumField);			
 		}
+		sumsourse+=this.props.ovn.ovnsum;		
 		if (this.props.ovn.sum > sumsourse)
 		{
 			this.props.actions.toogleBut(true)
@@ -32,16 +32,16 @@ static propTypes = {
 	}
 
 	render() {
-	const {actions,ovn,sourses} = this.props;	
+		const {actions,ovn,sourses} = this.props;	
 		return (<div className={styles.SumGroup}>	
-		         <div className={styles.leftside}>	
+					<div className={styles.leftside}>	
 					<label>Сумма</label>
 					<br/>
-					<TextFieldSum onChange={this.handleToogle}  onKeyUp={this.handleSetSum}/>
+					<TextFieldSum onKeyUp={this.handleToogle}  onChange={this.handleSetSum}/>
 					</div>
 					<label className={styles.label__rubl}>рубль РФ</label>
-					</div>
-				)	
+			</div>
+			)	
 	}
 	
 }

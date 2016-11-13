@@ -11,24 +11,24 @@ export default class ButtonCom extends Component {
 
 	
 	handleSave = (e)  => {
-		if (true) {
+		if (document.getElementById("sel").value!=="" && document.getElementById("ta").value!=="" && document.getElementById("ta").value!=="inp") {
 			this.props.actions.AddSourse(document.getElementById("sel").value, document.getElementById("ta").value ,Number(document.getElementById("inp").value));
 			document.getElementById("sel").value="";
 			document.getElementById("ta").value="";
 			document.getElementById("inp").value="";
 			this.props.actions.setSumOvn("");
 		}
+		else 
+			alert("Не введены все поля!")
 	}
-
 	render()
 	{
 		var activeBut =this.props.button.activeBut;
-
 		return (<button 
-			className={(activeBut==true) ? styles.buttonGroup__active : styles.buttonGroup__notactive} 
-			onClick={this.handleSave} >+ 
-			Добавить источник поступления
-			</button>	
+						className={(activeBut==true) ? styles.buttonGroup__active : styles.buttonGroup__notactive} 
+						onClick={this.handleSave} >+ 
+						Добавить источник поступления
+					</button>				
 			)
 		}
 	}

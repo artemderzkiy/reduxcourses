@@ -6,12 +6,13 @@ export default class TextField extends Component {
 	{
 		return (
 			<input
-				id="inp" 
-				className={styles.input__simple}
-				type="Number" 
-				onChange={e => this.props.onChange(e)} 
-				value={this.props.myValue}  
-				disabled={this.props.disabledVal}/>			
+			id="inp" 
+			className={styles.input__simple}
+			type="Number" 
+			onChange={e => this.props.onChange(e)}
+			onKeyUp={e => this.props.onKeyUp(e)} 
+			value={this.props.myValue}  
+			disabled={this.props.disabledVal}/>			
 			)
 		}
 	}

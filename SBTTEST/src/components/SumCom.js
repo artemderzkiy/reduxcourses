@@ -12,28 +12,27 @@ static propTypes = {
 	}
 	render() {
 	const {actions,ovn,sourse} = this.props;		
-	
 	 if (this.props.sourse.id==0)
 	{
 		return (<div className={styles.SumGroup}>	
-		         <div className={styles.leftside}>	
-					<label>Сумма</label>
-					<br/>
-					<TextField myValue={ovn.ovnsum}   />
-					</div>
-					<label className={styles.label__rubl}>рубль РФ</label>
+		         	<div className={styles.leftside}>	
+							<label>Сумма</label>
+							<br/>
+							<TextField myValue={ovn.ovnsum}   />
+						</div>
+						<label className={styles.label__rubl}>рубль РФ</label>
 					</div>
 				)	
 	}
 	else 
 		{
 		return (<div className={styles.SumGroup}>	
-		         <div className={styles.leftside}>	
-					<label>Сумма</label>
-					<br/>
-					<TextField  myValue={this.props.myValueInp}  disabledVal={this.props.disabledVal}/>
-					</div>
-					<label className={styles.label__rubl}>рубль РФ</label>
+		         	<div className={styles.leftside}>	
+							<label>Сумма</label>
+							<br/>
+							<TextField  myValue={this.props.myValueInp}  disabledVal={this.props.disabledVal}/>
+						</div>
+						<label className={styles.label__rubl}>рубль РФ</label>
 					</div>
 				)	
 	}

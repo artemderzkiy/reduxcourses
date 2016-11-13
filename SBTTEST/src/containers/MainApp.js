@@ -14,18 +14,16 @@ import stylesfont from 'react-fontawesome'
 
 
 const MainApp = ({sourses,ovn,button, actions}) => ( 
-   <div>   
-  <NumOvnCom actions={actions} ovn={ovn} sourses={sourses}/>
-  <div className={styles.line}/>
-  <h1>Введите общую сумму взноса</h1>
-  <SumComSum actions={actions} ovn={ovn} sourses={sourses}/>
-  <div className={styles.line}/>
-  
-  <SoursesList sourses={sourses} ovn={ovn} actions={actions}/>  
-  <ButtonCom actions={actions}  button={button} ovn={ovn}/>  
-  </div>  
- 
-  )
+ <div>   
+    <NumOvnCom actions={actions} ovn={ovn} sourses={sourses}/>
+    <div className={styles.line}/>
+    <h1>Введите общую сумму взноса</h1>
+    <SumComSum actions={actions} ovn={ovn} sourses={sourses}/>
+    <div className={styles.line}/>
+    <SoursesList sourses={sourses} ovn={ovn} actions={actions}/>  
+    <ButtonCom actions={actions}  button={button} ovn={ovn}/>  
+ </div>  
+ )
 
 MainApp.propTypes = {
   sourses: PropTypes.array.isRequired, 
