@@ -1,5 +1,5 @@
 import React, {Component,PropTypes} from 'react'
-import TextFieldSum from './TextFieldSum'
+import TextField from './TextField'
 import styles from '../css/style.css'
 
 
@@ -37,7 +37,7 @@ export default class SumComSum extends Component {
 					<div className={styles.leftside}>	
 					<label>Сумма</label>
 					<br/>
-					<TextFieldSum onKeyUp={this.handleToogle}  onChange={this.handleSetSum}/>
+					<TextField onKeyUp={this.handleToogle}  onChange={this.handleSetSum}/>
 					</div>
 					<label className={styles.label__rubl}>рубль РФ</label>
 			</div>

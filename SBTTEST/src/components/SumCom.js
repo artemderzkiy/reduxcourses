@@ -18,7 +18,7 @@ static propTypes = {
 		         	<div className={styles.leftside}>	
 							<label>Сумма</label>
 							<br/>
-							<TextField myValue={ovn.ovnsum}   />
+							<TextField myValue={ovn.ovnsum}  disabledVal={true} />
 						</div>
 						<label className={styles.label__rubl}>рубль РФ</label>
 					</div>
