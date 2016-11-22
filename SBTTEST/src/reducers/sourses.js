@@ -4,18 +4,18 @@ const initialState = [{
   id : 0,
   sourseField : '',
   kasSymb : '',  
-    sumField : ''
+  sumField : ''
 }]
 
 function checkAdd(action, state) {  
   return [
-     ...state, {
-        id: `id_${Date.now().toString(36)}`,
-        sourseField: action.sourseField,
-        kasSymb : action.kasSymb,  
-        sumField : action.sumField
-      }      
-    ]
+  ...state, {
+    id: `id_${Date.now().toString(36)}`,
+    sourseField: action.sourseField,
+    kasSymb : action.kasSymb,  
+    sumField : action.sumField
+  }      
+  ]
 }
 
 
@@ -28,7 +28,7 @@ export default function sourses (state = initialState, action) {
     
     case 'DELETE_SOURSE':
     return state.filter(sourse =>
-        sourse.id !== action.id
+      sourse.id !== action.id
       )
 
     default:

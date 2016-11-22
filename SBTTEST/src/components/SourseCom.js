@@ -20,40 +20,46 @@ export default class SourseCom extends Component {
 		if (sourse.id!=0)
 		{
 			element = (<div>
-								<h1>Укажите источник поступления</h1>
-								<div className={styles.SourseGroupTrash}>
-									<div className={styles.SourseGroup}>							
-										<ComboBox myValueCheck={sourse.kasSymb} disabledVal={true} />					
-										<SumCom ovn={ovn} actions={actions} sourse={sourse} myValueInp={sourse.sumField} disabledVal={true}/>
-									</div>
-									<button className={styles.button_trash}>
-										<span className="glyphicon glyphicon-trash" aria-hidden="true"
-										onClick={() => actions.DeleteSourse(sourse.id)}>
-										</span>
-									</button>
-								</div>				
-								<TextArea myValueArea={sourse.sourseField} disabledVal={true}/>
-								<div className={styles.line}/>		
-						</div>
+				<h1>Укажите источник поступления</h1>
+				<div className={styles.SourseGroupTrash}>
+				<div className={styles.SourseGroup}>
+				<label>Кассовый символ</label>
+				<br/>								
+				<ComboBox myValueCheck={sourse.kasSymb} disabledVal={true} />					
+				<SumCom ovn={ovn} actions={actions} sourse={sourse} myValueInp={sourse.sumField} disabledVal={true}/>
+				</div>
+				<button className={styles.button_trash}>
+				<span className="glyphicon glyphicon-trash" aria-hidden="true"
+				onClick={() => actions.DeleteSourse(sourse.id)}>
+				</span>
+				</button>
+				</div>				
+				<TextArea myValueArea={sourse.sourseField} disabledVal={true}/>
+				<div className={styles.line}/>		
+				</div>
 				)
-		}
-		else 
-		{
-			element = (<div>
-								<h1>Укажите источник полступления</h1>
-								<div className={styles.SourseGroup}>
-									<div>			
-										<ComboBox/>
-									</div>
-									<SumCom ovn={ovn} actions={actions} sourse={sourse}/>
-								</div>
-								<TextArea />
-								<div className={styles.line}/>		
-							</div>
-				)
-		}
+			}
+			else 
+			{
+				element = (<div>
+				<h1>Укажите источник полступления</h1>
+				<div className={styles.SourseGroup}>
+				<div>
+				<label>Кассовый символ</label>
+				<br/>				
+				<ComboBox/>
 
-		return (<li>
+				</div>
+				<SumCom ovn={ovn} actions={actions} sourse={sourse}/>
+				</div>
+				<label>Источник поступления</label>
+				<TextArea />
+				<div className={styles.line}/>		
+				</div>
+				)
+			}
+
+			return (<li>
 			{element}
 			</li>
 			)

@@ -6,19 +6,15 @@ export default class ComboBox extends Component {
 	{
 
 		let KasSymbols = ['rubles', 'dollars', 'evros'];
-		return( 
-					<div>	
-						<label>Кассовый символ</label>
-						<br/>	
-						<select
-							id="sel" 
-							value={this.props.myValueCheck}
-							disabled={this.props.disabledVal}>
-							{KasSymbols.map(KasSymbol =>
-							<option  key={KasSymbol} value={KasSymbol} >{KasSymbol}</option>
-							)}			 
-						</select>	
-					</div>
+		return( 			
+			<select
+			id="sel" 
+			value={this.props.myValueCheck}
+			disabled={this.props.disabledVal}>
+			{KasSymbols.map(KasSymbol =>
+				<option  key={KasSymbol} value={KasSymbol} >{KasSymbol}</option>
+				)}			 
+				</select>					
 				)
 			}
 		}

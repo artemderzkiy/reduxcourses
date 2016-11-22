@@ -19,7 +19,7 @@ export default class SumComSum extends Component {
 		for (var sourse of this.props.sourses) {   
 			sumsourse+=Number(sourse.sumField);			
 		}
-		sumsourse+=this.props.ovn.ovnsum;		
+		sumsourse+=this.props.ovn.ovnNum;		
 		if (this.props.ovn.sum > sumsourse)
 		{
 			this.props.actions.toogleBut(true)

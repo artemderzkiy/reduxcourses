@@ -22,11 +22,11 @@ export const DeleteSourse = (id) =>
 }
 
 
-export const setSumOvn = (ovnsum) =>
+export const setNumOvn = (ovnNum) =>
 {
 	return {
-		type: types.SET_SUM_OVN,
-		ovnsum
+		type: types.SET_NUM_OVN,
+		ovnNum
 	}
 }
 

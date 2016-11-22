@@ -11,12 +11,12 @@ export default class ButtonCom extends Component {
 
 	
 	handleSave = (e)  => {
-		if (document.getElementById("sel").value!=="" && document.getElementById("ta").value!=="" && document.getElementById("ta").value!=="inp") {
+		if (document.getElementById("sel").value!=="" && document.getElementById("ta").value!=="" && document.getElementById("ta").value!=="") {
 			this.props.actions.AddSourse(document.getElementById("sel").value, document.getElementById("ta").value ,Number(document.getElementById("inp").value));
 			document.getElementById("sel").value="";
 			document.getElementById("ta").value="";
 			document.getElementById("inp").value="";
-			this.props.actions.setSumOvn("");
+			this.props.actions.setNumOvn("");
 		}
 		else 
 			alert("Не введены все поля!")
@@ -25,10 +25,10 @@ export default class ButtonCom extends Component {
 	{
 		var activeBut =this.props.button.activeBut;
 		return (<button 
-						className={(activeBut==true) ? styles.buttonGroup__active : styles.buttonGroup__notactive} 
-						onClick={this.handleSave} >+ 
-						Добавить источник поступления
-					</button>				
+			className={(activeBut==true) ? styles.buttonGroup__active : styles.buttonGroup__notactive} 
+			onClick={this.handleSave} >+ 
+			Добавить источник поступления
+			</button>				
 			)
 		}
 	}
