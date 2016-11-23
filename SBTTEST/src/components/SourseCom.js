@@ -16,24 +16,27 @@ export default class SourseCom extends Component {
 
 	render() {
 		const { sourse,ovn, actions } = this.props;		
-		let element;		
+		let element;				
 		if (sourse.id!=0)
 		{
 			element = (<div>
 				<h1>Укажите источник поступления</h1>
 				<div className={styles.SourseGroupTrash}>
 				<div className={styles.SourseGroup}>
+				<div>
 				<label>Кассовый символ</label>
 				<br/>								
-				<ComboBox myValueCheck={sourse.kasSymb} disabledVal={true} />					
-				<SumCom ovn={ovn} actions={actions} sourse={sourse} myValueInp={sourse.sumField} disabledVal={true}/>
+				<ComboBox myValueCheck={sourse.kasSymb} disabledVal={true} />	
+				</div>				
+				<SumCom  ovn={ovn} actions={actions} sourse={sourse} myValueInp={sourse.sumField} disabledVal={true}/>
 				</div>
 				<button className={styles.button_trash}>
 				<span className="glyphicon glyphicon-trash" aria-hidden="true"
 				onClick={() => actions.DeleteSourse(sourse.id)}>
 				</span>
 				</button>
-				</div>				
+				</div>	
+				<label>Источник поступления</label>			
 				<TextArea myValueArea={sourse.sourseField} disabledVal={true}/>
 				<div className={styles.line}/>		
 				</div>
@@ -50,7 +53,7 @@ export default class SourseCom extends Component {
 				<ComboBox/>
 
 				</div>
-				<SumCom ovn={ovn} actions={actions} sourse={sourse}/>
+				<SumCom idInp={sourse.id}  ovn={ovn} actions={actions} sourse={sourse}/>
 				</div>
 				<label>Источник поступления</label>
 				<TextArea />

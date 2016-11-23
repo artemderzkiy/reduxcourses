@@ -6,7 +6,7 @@ export default class TextField extends Component {
 	{
 		return (
 			<input
-			id="inp" 
+			id={this.props.idInp} 
 			className={styles.input__simple}
 			type="Number" 
 			onChange={e => this.props.onChange(e)}

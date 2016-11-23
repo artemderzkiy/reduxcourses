@@ -14,22 +14,7 @@ export default class SumComSum extends Component {
 		this.props.actions.setSum(e.target.value)			
 	}
 
-	handleToogle = e => {
-		let sumsourse=0;
-		for (var sourse of this.props.sourses) {   
-			sumsourse+=Number(sourse.sumField);			
-		}
-		sumsourse+=this.props.ovn.ovnNum;		
-		if (this.props.ovn.sum > sumsourse)
-		{
-			this.props.actions.toogleBut(true)
-		}		
-		else  
-		{
-			this.props.actions.toogleBut(false)
-		}
-		
-	}
+	
 
 	render() {
 		const {actions,ovn,sourses} = this.props;	
@@ -37,7 +22,7 @@ export default class SumComSum extends Component {
 					<div className={styles.leftside}>	
 					<label>Сумма</label>
 					<br/>
-					<TextField onKeyUp={this.handleToogle}  onChange={this.handleSetSum}/>
+					<TextField idInp={"inp"} onKeyUp={this.handleSetSum}  onChange={this.handleSetSum}/>
 					</div>
 					<label className={styles.label__rubl}>рубль РФ</label>
 			</div>

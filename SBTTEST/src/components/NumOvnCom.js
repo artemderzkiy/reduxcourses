@@ -14,22 +14,7 @@ export default class NumOvnCom extends Component {
 		this.props.actions.setNumOvn(e.target.value)		
 	}	
 
-	handleToogle = e => {
-		let sumsourse=0;
-		for (var sourse of this.props.sourses) {   
-			sumsourse+=Number(sourse.sumField);			
-		}
-		sumsourse+=this.props.ovn.ovnNum;
-		if (this.props.ovn.sum > sumsourse)
-		{
-			this.props.actions.toogleBut(true)
-		}		
-		else  
-		{
-			this.props.actions.toogleBut(false)
-		}
-		
-	}
+	
 
 	render()
 	{
@@ -39,7 +24,7 @@ export default class NumOvnCom extends Component {
 			<div >
 			<label>Номер ОВН</label>
 			<br/>
-			<TextField onKeyUp={this.handleToogle} onChange={this.handleSetSumOvn}   />
+			<TextField onKeyUp={this.handleSetSumOvn} onChange={this.handleSetSumOvn}   />
 			</div>		
 			</div>
 			)

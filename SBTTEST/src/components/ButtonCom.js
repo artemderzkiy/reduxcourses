@@ -11,12 +11,10 @@ export default class ButtonCom extends Component {
 
 	
 	handleSave = (e)  => {
-		if (document.getElementById("sel").value!=="" && document.getElementById("ta").value!=="" && document.getElementById("ta").value!=="") {
-			this.props.actions.AddSourse(document.getElementById("sel").value, document.getElementById("ta").value ,Number(document.getElementById("inp").value));
+		if (document.getElementById("sel").value!=="" && document.getElementById("ta").value!=="" && document.getElementById("0").value!=="") {
+			this.props.actions.AddSourse(document.getElementById("sel").value, document.getElementById("ta").value ,Number(document.getElementById("0").value));
 			document.getElementById("sel").value="";
-			document.getElementById("ta").value="";
-			document.getElementById("inp").value="";
-			this.props.actions.setNumOvn("");
+			document.getElementById("ta").value="";			
 		}
 		else 
 			alert("Не введены все поля!")
